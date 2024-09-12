@@ -13,15 +13,17 @@ def train(train_loader, val_loader, technique='none', weight_decay=0):
 
     model = LeNet(
         use_dropout=(technique == 'dropout'),
-        use_bn=(technique == 'bn'))
+        use_bn=(technique == 'batch_norm'))
     
     criterion = nn.CrossEntropyLoss()  
     optimizer = optim.Adam(model.parameters(), lr=0.001, weight_decay=weight_decay) 
 
     train_accuracies = []
     val_accuracies = []
-
-    for epoch in range(15):
+    epoch = 0
+    best_val_accuracy = 0
+    count_down = 3
+    while count_down > 0:
         correct = 0
         total = 0
         running_loss = 0.0
@@ -66,13 +68,20 @@ def train(train_loader, val_loader, technique='none', weight_decay=0):
         val_accuracy = 100 * correct / total
         val_accuracies.append(val_accuracy)
         print(f"Epoch {epoch + 1}, Val Loss: {val_loss / len(val_loader)}, Accuracy on the val set: {val_accuracy}%")
+        
+        if val_accuracy > best_val_accuracy:
+            best_val_accuracy = val_accuracy
+            count_down = 3
+            best_model = model
+            os.makedirs('Lenet5/models', exist_ok=True)
+            torch.save(model.state_dict(), f'Lenet5/models/lenet5_{technique}.pth')
+        else:
+            count_down -= 1
+        epoch += 1
 
     print("Finished Training")
 
-    os.makedirs('Lenet5/models', exist_ok=True)
-    torch.save(model.state_dict(), f'Lenet5/models/lenet5_{technique}.pth')
-
-    return train_accuracies, model
+    return train_accuracies, best_model
 
 
 def test(model, test_loader):
@@ -116,8 +125,8 @@ if __name__ == '__main__':
     val_size = len(full_train_dataset) - train_size
     train_dataset, val_dataset = random_split(full_train_dataset, [train_size, val_size])
 
-    train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
-    val_loader = DataLoader(val_dataset, batch_size=32, shuffle=False)
+    train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
+    val_loader = DataLoader(val_dataset, batch_size=64, shuffle=False)
 
     # test_dataset = torchvision.datasets.MNIST(root='HW1/download', train=False, transform=transform, download=True)
     test_dataset = MNISTDataset('Lenet5/data/test-images-idx3-ubyte.gz', 'Lenet5/data/test-labels-idx1-ubyte.gz', transform=transform)
