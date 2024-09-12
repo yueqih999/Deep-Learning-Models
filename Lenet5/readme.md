@@ -3,10 +3,14 @@ This project implements the LeNet5 model to classify the MNIST dataset with vari
 
 ## Training the Model
 To train model:
+
 ```python main.py```
 
 ## Testing the Model with Saved Weights
 ```python test.py none```
+
 ```python test.py dropout```
+
 ```python test.py l2```
+
 ```python test.py batch_norm```
