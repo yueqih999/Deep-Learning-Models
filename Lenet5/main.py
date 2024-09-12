@@ -39,16 +39,28 @@ def train(train_loader, val_loader, technique='none', weight_decay=0):
             optimizer.step()  
 
             running_loss += loss.item()
-            _, predicted = torch.max(outputs.data, 1)  
-            total += labels.size(0)
-            correct += (predicted == labels).sum().item()
+            # _, predicted = torch.max(outputs.data, 1)  
+            # total += labels.size(0)
+            # correct += (predicted == labels).sum().item()
+
+        # train_acc = 100 * correct / total
+        # train_accuracies.append(train_acc)
+
+        # print(f"Epoch {epoch + 1}, Train Loss: {running_loss / len(train_loader)}, Train Accuracy: {train_acc}%")
+
+        model.eval()
+        with torch.no_grad():  # No gradients needed for accuracy calculation
+            for data in train_loader:
+                inputs, labels = data
+                outputs = model(inputs)  # Forward pass
+                _, predicted = torch.max(outputs.data, 1)
+                total += labels.size(0)
+                correct += (predicted == labels).sum().item()
 
         train_acc = 100 * correct / total
         train_accuracies.append(train_acc)
-
         print(f"Epoch {epoch + 1}, Train Loss: {running_loss / len(train_loader)}, Train Accuracy: {train_acc}%")
 
-        model.eval()
         correct = 0
         total = 0
         val_loss = 0.0
