@@ -67,8 +67,8 @@ def train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, batch_
 
 if __name__ == "__main__":
     data_path = 'LSTM/ptb_data'  
-    batch_size = 32
+    batch_size = 128
     train_loader, valid_loader, test_loader, vocab_size = load_data(data_path, batch_size)
 
-    train(train_loader, valid_loader, vocab_size, num_layers=2, num_epochs=70, batch_size=batch_size,
+    train(train_loader, valid_loader, vocab_size, num_layers=2, num_epochs=20, batch_size=batch_size,
           model_save_name='LSTM/models/train-checkpoint')
