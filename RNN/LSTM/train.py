@@ -13,7 +13,7 @@ def train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, batch_
     model = LSTM(vocab_size=vocab_size, hidden_size=200, num_layers=num_layers, dropout=dropout_prob)
 
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.AdamW(model.parameters(), lr=learning_rate) 
+    optimizer = optim.SGD(model.parameters(), lr=learning_rate)
 
     current_lr = learning_rate
     train_losses = []
@@ -67,7 +67,7 @@ def train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, batch_
 
         if epoch >= 4:
             current_lr *= 0.5
-            for param_group in optimizer.param_grousps:
+            for param_group in optimizer.param_groups:
                 param_group['lr'] = current_lr
 
     torch.save(model.state_dict(), f'{model_save_name}-final.pt')
@@ -103,7 +103,7 @@ def plot_ppl(learning_rate, dropout_prob, num_epochs, train_ppl, val_ppl, test_p
     plt.figure()
     plt.plot(range(1, num_epochs + 1), train_ppl, label='Train Perplexity')
     plt.plot(range(1, num_epochs + 1), val_ppl, label='Validation Perplexity')
-    plt.axhiline(y=test_ppl, label='Test Perplexity')
+    plt.axhline(y=test_ppl, label='Test Perplexity')
     plt.xlabel('Epochs')
     plt.ylabel('Perplexity')
     plt.title(f'Learning Rate: {learning_rate}, Dropout: {dropout_prob}')
@@ -115,7 +115,7 @@ def plot_ppl(learning_rate, dropout_prob, num_epochs, train_ppl, val_ppl, test_p
 if __name__ == "__main__":
     data_path = 'RNN/ptb_data'  
     batch_size = 20
-    num_epochs = 20
+    num_epochs = 13
     num_layers = 2
     train_loader, valid_loader, test_loader, vocab_size = load_data(data_path, batch_size)
 
