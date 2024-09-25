@@ -25,6 +25,7 @@ def train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, batch_
         model.train()
 
         total_loss = 0
+        total_tokens = 0
         start_time = time.time()
 
         hidden = model.init_hidden(batch_size)
@@ -42,15 +43,23 @@ def train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, batch_
             torch.nn.utils.clip_grad_norm_(model.parameters(), 5)
             optimizer.step()
 
-            total_loss += loss.item()
+            total_loss += loss.item() * targets.numel()
+            total_tokens += targets.numel()
 
             if (i + 1) % print_iter == 0:
                 elapsed = time.time() - start_time
                 print(f'Epoch {epoch+1}, Step {i+1}, Loss: {loss.item():.4f}, Elapsed time: {elapsed:.2f} seconds')
                 start_time = time.time()
         
+        avg_train_loss = total_loss / total_tokens  
+        train_losses.append(avg_train_loss)
+
+        train_ppl = math.exp(avg_train_loss)
+        print(f'Epoch {epoch+1}, Step {i+1}, Train Perplexity: {train_ppl:.4f}')
+
         model.eval() 
         val_loss = 0
+        val_tokens = 0
         with torch.no_grad():
             hidden = model.init_hidden(batch_size)
             for data, targets in valid_loader:
@@ -60,19 +69,20 @@ def train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, batch_
                 hidden = hidden.detach()
 
                 loss = criterion(logits.view(-1, vocab_size), targets.view(-1))
-                val_loss += loss.item()
+                val_loss += loss.item() * targets.numel()
+                val_tokens += targets.numel()
 
-        avg_train_loss = total_loss / len(train_loader)
-        train_losses.append(avg_train_loss)
-        avg_val_loss = val_loss / len(valid_loader)
+        avg_val_loss = val_loss / val_tokens
         val_losses.append(avg_val_loss)
-        print(f'Epoch {epoch+1}, train perplexity:{math.exp(avg_train_loss):.4f}, Validation Loss: {avg_val_loss:.4f}, validation Perplexity: {math.exp(avg_val_loss):.4f}')
+
+        val_ppl = math.exp(avg_val_loss)
+        print(f'Epoch {epoch+1}, Validation Perplexity: {val_ppl:.4f}')
 
     torch.save(model.state_dict(), f'{model_save_name}-final.pt')
-    train_ppl = [math.exp(loss) for loss in train_losses]
-    val_ppl = [math.exp(loss) for loss in val_losses]
+    train_ppl_all = [math.exp(loss) for loss in train_losses]
+    val_ppl_all = [math.exp(loss) for loss in val_losses]
 
-    return train_ppl, val_ppl, model
+    return train_ppl_all, val_ppl_all, model
 
 
 def test(model, test_loader, vocab_size, batch_size):
