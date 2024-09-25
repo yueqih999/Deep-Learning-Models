@@ -7,10 +7,12 @@ from dataset import load_data
 import matplotlib.pyplot as plt
 import math
 
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu") 
+
 def train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, batch_size, model_save_name, 
           learning_rate, dropout_prob, print_iter=10):
     
-    model = LSTM(vocab_size=vocab_size, hidden_size=200, num_layers=num_layers, dropout=dropout_prob)
+    model = LSTM(vocab_size=vocab_size, hidden_size=200, num_layers=num_layers, dropout=dropout_prob).to(device)
 
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.SGD(model.parameters(), lr=learning_rate, momentum=0.9)
@@ -29,6 +31,8 @@ def train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, batch_
         hidden = model.init_hidden(batch_size)
 
         for i, (data, targets) in enumerate(train_loader):
+            data, targets = data.to(device), targets.to(device)
+
             optimizer.zero_grad()
             logits, hidden = model(data, hidden)
             hidden = (hidden[0].detach(), hidden[1].detach())
@@ -59,6 +63,7 @@ def train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, batch_
         with torch.no_grad():
             hidden = model.init_hidden(batch_size)
             for data, targets in valid_loader:
+                data, targets = data.to(device), targets.to(device)
                 logits, hidden = model(data, hidden)
                 hidden = (hidden[0].detach(), hidden[1].detach())
 
@@ -93,6 +98,7 @@ def test(model, test_loader, vocab_size, batch_size):
     with torch.no_grad():
         hidden = model.init_hidden(batch_size)
         for data, targets in test_loader:
+            data, targets = data.to(device), targets.to(device)
             logits, hidden = model(data, hidden)
             hidden = (hidden[0].detach(), hidden[1].detach())
 

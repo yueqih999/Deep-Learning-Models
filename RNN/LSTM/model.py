@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu") 
 
 class LSTM(nn.Module):
     def __init__(self, vocab_size, hidden_size, num_layers, dropout=0.5, init_scale=0.1, is_training=True):
@@ -22,8 +23,8 @@ class LSTM(nn.Module):
         
     def forward(self, x, hidden):
         embeds = self.embedding(x)
-        if self.is_training:
-            embeds = F.dropout(embeds, p=self.dropout)
+        # if self.is_training:
+            # embeds = F.dropout(embeds, p=self.dropout)
         # print(f'Input data shape before LSTM: {embeds.shape}')
         lstm_out, hidden = self.lstm(embeds, hidden)
         lstm_out = lstm_out.contiguous().view(-1, self.hidden_size)
@@ -33,5 +34,5 @@ class LSTM(nn.Module):
 
     def init_hidden(self, batch_size):
         weight = next(self.parameters()).data
-        return (weight.new_zeros(self.num_layers, batch_size, self.hidden_size),
-                weight.new_zeros(self.num_layers, batch_size, self.hidden_size))
+        return (torch.zeros(self.num_layers, batch_size, self.hidden_size).to(device),
+                torch.zeros(self.num_layers, batch_size, self.hidden_size).to(device))
