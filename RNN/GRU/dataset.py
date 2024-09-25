@@ -9,11 +9,11 @@ class PTBDataset(Dataset):
         self.seq_length = seq_length
 
     def __len__(self):
-        return len(self.data) // self.seq_length
+        return len(self.data) - self.seq_length
     
     def __getitem__(self, index):
-        input_data = self.data[index * self.seq_length:index * self.seq_length + self.seq_length]
-        target_data = self.data[index * self.seq_length + 1:index * self.seq_length + self.seq_length + 1]
+        input_data = self.data[index: index + self.seq_length]
+        target_data = self.data[index + 1:index + self.seq_length + 1]
         return torch.tensor(input_data, dtype=torch.long), torch.tensor(target_data, dtype=torch.long)
 
 
