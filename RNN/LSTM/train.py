@@ -16,7 +16,7 @@ def train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, batch_
     model = LSTM(vocab_size=vocab_size, hidden_size=200, num_layers=num_layers, dropout=dropout_prob).to(device)
 
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.SGD(model.parameters(), lr=learning_rate, momentum=0.9)
+    optimizer = optim.SGD(model.parameters(), lr=learning_rate, weight_decay=1e-5)
 
     current_lr = learning_rate
     train_losses = []
