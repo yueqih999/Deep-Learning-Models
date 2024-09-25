@@ -24,6 +24,7 @@ class LSTM(nn.Module):
         embeds = self.embedding(x)
         if self.is_training:
             embeds = F.dropout(embeds, p=self.dropout)
+        # print(f'Input data shape before LSTM: {embeds.shape}')
         lstm_out, hidden = self.lstm(embeds, hidden)
         lstm_out = lstm_out.contiguous().view(-1, self.hidden_size)
 

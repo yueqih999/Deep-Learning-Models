@@ -109,7 +109,7 @@ if __name__ == "__main__":
     data_path = 'RNN/ptb_data'  
     batch_size = 1024
     num_epochs = 25
-    num_layers = 2
+    num_layers = 4
     train_loader, valid_loader, test_loader, vocab_size = load_data(data_path, batch_size)
 
     settings = [
