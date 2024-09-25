@@ -8,6 +8,8 @@ import matplotlib.pyplot as plt
 import math
 import argparse
 
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu") 
+
 def train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, batch_size, model_save_name, 
           learning_rate, dropout_prob, print_iter=100):
     
@@ -28,7 +30,8 @@ def train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, batch_
         hidden = model.init_hidden(batch_size)
 
         for i, (data, targets) in enumerate(train_loader):
-            data = data.view(data.size(0), -1)
+            data, targets = data.to(device), targets.to(device)
+            # data = data.view(data.size(0), -1)
             optimizer.zero_grad()
             logits, hidden = model(data, hidden)
             hidden = hidden.detach()
@@ -51,7 +54,8 @@ def train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, batch_
         with torch.no_grad():
             hidden = model.init_hidden(batch_size)
             for data, targets in valid_loader:
-                data = data.view(data.size(0), -1)
+                data, targets = data.to(device), targets.to(device)
+                # data = data.view(data.size(0), -1)
                 logits, hidden = model(data, hidden)
                 hidden = hidden.detach()
 
@@ -80,7 +84,8 @@ def test(model, test_loader, vocab_size, batch_size):
     with torch.no_grad():
         hidden = model.init_hidden(batch_size)
         for data, targets in test_loader:
-            data = data.view(data.size(0), -1)
+            data, targets = data.to(device), targets.to(device)
+            # data = data.view(data.size(0), -1)
             logits, hidden = model(data, hidden)
             hidden = hidden.detach()
 
