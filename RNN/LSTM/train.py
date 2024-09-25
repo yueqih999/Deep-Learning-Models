@@ -11,7 +11,7 @@ import argparse
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu") 
 
 def train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, batch_size, model_save_name, 
-          learning_rate, dropout_prob, print_iter=500):
+          learning_rate, dropout_prob, decay_epochs=7, decay_co=2, print_iter=100):
     
     model = LSTM(vocab_size=vocab_size, hidden_size=200, num_layers=num_layers, dropout=dropout_prob).to(device)
 
@@ -78,8 +78,8 @@ def train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, batch_
         val_ppl = math.exp(avg_val_loss)
         print(f'Epoch {epoch+1}, Validation Perplexity: {val_ppl:.4f}')
 
-        if epoch >= 6:
-            current_lr *= 0.5
+        if epoch >= decay_epochs:
+            current_lr /= decay_co
             for param_group in optimizer.param_groups:
                 param_group['lr'] = current_lr
 
@@ -135,6 +135,8 @@ if __name__ == "__main__":
     parser.add_argument('--learning_rate', type=float, default=1.0, help='Learning rate')
     parser.add_argument('--dropout', type=float, default=0.5, help='Dropout probability')
     parser.add_argument('--num_layers', type=int, default=2, help='Number of LSTM layers')
+    parser.add_argument('--decay_epochs', type=int, default=7, help='Number of epochs to divide lr')
+    parser.add_argument('--decay_co', type=int, default=2, help='Divide Learning Rate')
 
     args = parser.parse_args()
 
@@ -145,7 +147,7 @@ if __name__ == "__main__":
     train_ppl, val_ppl, model = train(train_loader, valid_loader, vocab_size, args.num_layers, args.num_epochs, 
                                         batch_size=args.batch_size, 
                                         model_save_name=f'RNN/LSTM/models/train-checkpoint-lr{args.learning_rate}-dropout{args.dropout}', 
-                                        learning_rate=args.learning_rate, dropout_prob=args.dropout)
+                                        learning_rate=args.learning_rate, dropout_prob=args.dropout, decay_epochs=args.decay_epochs, decay_co=args.decay_co)
 
     model_path = f'RNN/LSTM/models/train-checkpoint-lr{args.learning_rate}-dropout{args.dropout}-final.pt'
     model.load_state_dict(torch.load(model_path))
