@@ -116,8 +116,6 @@ if __name__ == "__main__":
     parser.add_argument('--learning_rate', type=float, default=0.001, help='Learning rate')
     parser.add_argument('--dropout', type=float, default=0.5, help='Dropout probability')
     parser.add_argument('--num_layers', type=int, default=2, help='Number of GRU layers')
-    parser.add_argument('--decay_epochs', type=int, default=7, help='Number of epochs to divide lr')
-    parser.add_argument('--decay_co', type=float, default=2, help='Divide Learning Rate')
 
     args = parser.parse_args()
 
