@@ -78,7 +78,7 @@ def train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, batch_
         val_ppl = math.exp(avg_val_loss)
         print(f'Epoch {epoch+1}, Validation Perplexity: {val_ppl:.4f}')
 
-        if epoch >= 8:
+        if epoch >= 6:
             current_lr *= 0.5
             for param_group in optimizer.param_groups:
                 param_group['lr'] = current_lr
