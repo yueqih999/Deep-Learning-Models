@@ -45,7 +45,7 @@ def train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, batch_
                 elapsed = time.time() - start_time
                 print(f'Epoch {epoch+1}, Step {i+1}, Loss: {loss.item():.4f}, Elapsed time: {elapsed:.2f} seconds')
                 start_time = time.time()
-
+        
         model.eval() 
         val_loss = 0
         with torch.no_grad():
@@ -62,7 +62,7 @@ def train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, batch_
         train_losses.append(avg_train_loss)
         avg_val_loss = val_loss / len(valid_loader)
         val_losses.append(avg_val_loss)
-        print(f'Epoch {epoch+1}, Validation Loss: {avg_val_loss:.4f}')
+        print(f'Epoch {epoch+1}, train perplexity:{math.exp(avg_train_loss):.4f}, Validation Loss: {avg_val_loss:.4f}, validation Perplexity: {math.exp(avg_val_loss):.4f}')
 
     torch.save(model.state_dict(), f'{model_save_name}-final.pt')
     train_ppl = [math.exp(loss) for loss in train_losses]
