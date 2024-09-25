@@ -11,7 +11,7 @@ import argparse
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu") 
 
 def train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, batch_size, model_save_name, 
-          learning_rate, dropout_prob, print_iter=10):
+          learning_rate, dropout_prob, print_iter=500):
     
     model = LSTM(vocab_size=vocab_size, hidden_size=200, num_layers=num_layers, dropout=dropout_prob).to(device)
 
