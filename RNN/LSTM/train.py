@@ -6,6 +6,7 @@ from model import LSTM
 from dataset import load_data
 import matplotlib.pyplot as plt
 import math
+import argparse
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu") 
 
@@ -126,29 +127,29 @@ def plot_ppl(learning_rate, dropout_prob, num_epochs, train_ppl, val_ppl, test_p
 
 if __name__ == "__main__":
     data_path = 'RNN/ptb_data'  
-    batch_size = 2048
-    num_epochs = 15
-    num_layers = 2
-    train_loader, valid_loader, test_loader, vocab_size = load_data(data_path, batch_size)
 
-    settings = [
-        {'learning_rate': 2.0, 'dropout_prob': 0.0},
-        {'learning_rate': 1.0, 'dropout_prob': 0.5},
-    ]
+    parser = argparse.ArgumentParser(description='Train LSTM model with custom parameters')
+    
+    parser.add_argument('--batch_size', type=int, default=2048, help='Batch size for training')
+    parser.add_argument('--num_epochs', type=int, default=15, help='Number of epochs for training')
+    parser.add_argument('--learning_rate', type=float, default=1.0, help='Learning rate')
+    parser.add_argument('--dropout', type=float, default=0.5, help='Dropout probability')
+    parser.add_argument('--num_layers', type=int, default=2, help='Number of LSTM layers')
 
-    for setting in settings:
-        learning_rate = setting['learning_rate']
-        dropout_prob = setting['dropout_prob']
-        print(f"Running with Learning Rate: {learning_rate}, Dropout: {dropout_prob}")
-        
-        train_ppl, val_ppl, model = train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, 
-                                         batch_size=batch_size, 
-                                         model_save_name=f'RNN/LSTM/models/train-checkpoint-lr{learning_rate}-dropout{dropout_prob}', 
-                                         learning_rate=learning_rate, dropout_prob=dropout_prob)
+    args = parser.parse_args()
 
-        model_path = f'RNN/LSTM/models/train-checkpoint-lr{learning_rate}-dropout{dropout_prob}-final.pt'
-        model.load_state_dict(torch.load(model_path))
+    train_loader, valid_loader, test_loader, vocab_size = load_data(data_path, args.batch_size)
 
-        test_ppl = test(model, test_loader, vocab_size, batch_size)
+    print(f"Running with Learning Rate: {args.learning_rate}, Dropout: {args.dropout}")
+    
+    train_ppl, val_ppl, model = train(train_loader, valid_loader, vocab_size, args.num_layers, args.num_epochs, 
+                                        batch_size=args.batch_size, 
+                                        model_save_name=f'RNN/LSTM/models/train-checkpoint-lr{args.learning_rate}-dropout{args.dropout}', 
+                                        learning_rate=args.learning_rate, dropout_prob=args.dropout)
 
-        plot_ppl(learning_rate, dropout_prob, num_epochs, train_ppl, val_ppl, test_ppl)
+    model_path = f'RNN/LSTM/models/train-checkpoint-lr{args.learning_rate}-dropout{args.dropout}-final.pt'
+    model.load_state_dict(torch.load(model_path))
+
+    test_ppl = test(model, test_loader, vocab_size, args.batch_size)
+
+    plot_ppl(args.learning_rate, args.dropout, args.num_epochs, train_ppl, val_ppl, test_ppl)
