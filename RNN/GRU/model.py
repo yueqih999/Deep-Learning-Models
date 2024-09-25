@@ -30,5 +30,4 @@ class GRU(nn.Module):
     
     def init_hidden(self, batch_size):
         weight = next(self.parameters()).data
-        return (torch.zeros(self.num_layers, batch_size, self.hidden_size).to(device),
-                torch.zeros(self.num_layers, batch_size, self.hidden_size).to(device))
+        return torch.zeros(self.num_layers, batch_size, self.hidden_size).to(device)
