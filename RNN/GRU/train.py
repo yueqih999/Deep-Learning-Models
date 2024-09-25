@@ -6,6 +6,7 @@ from model import GRU
 from dataset import load_data
 import matplotlib.pyplot as plt
 import math
+import argparse
 
 def train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, batch_size, model_save_name, 
           learning_rate, dropout_prob, print_iter=100):
@@ -44,7 +45,7 @@ def train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, batch_
                 elapsed = time.time() - start_time
                 print(f'Epoch {epoch+1}, Step {i+1}, Loss: {loss.item():.4f}, Elapsed time: {elapsed:.2f} seconds')
                 start_time = time.time()
-
+        
         model.eval() 
         val_loss = 0
         with torch.no_grad():
@@ -61,7 +62,7 @@ def train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, batch_
         train_losses.append(avg_train_loss)
         avg_val_loss = val_loss / len(valid_loader)
         val_losses.append(avg_val_loss)
-        print(f'Epoch {epoch+1}, Validation Loss: {avg_val_loss:.4f}')
+        print(f'Epoch {epoch+1}, train perplexity:{math.exp(avg_train_loss):.4f}, Validation Loss: {avg_val_loss:.4f}, validation Perplexity: {math.exp(avg_val_loss):.4f}')
 
     torch.save(model.state_dict(), f'{model_save_name}-final.pt')
     train_ppl = [math.exp(loss) for loss in train_losses]
@@ -107,10 +108,20 @@ def plot_ppl(learning_rate, dropout_prob, num_epochs, train_ppl, val_ppl, test_p
 
 if __name__ == "__main__":
     data_path = 'RNN/ptb_data'  
-    batch_size = 1024
-    num_epochs = 25
-    num_layers = 4
-    train_loader, valid_loader, test_loader, vocab_size = load_data(data_path, batch_size)
+
+    parser = argparse.ArgumentParser(description='Train GRU model with custom parameters')
+
+    parser.add_argument('--batch_size', type=int, default=20, help='Batch size for training')
+    parser.add_argument('--num_epochs', type=int, default=20, help='Number of epochs for training')
+    parser.add_argument('--learning_rate', type=float, default=1.0, help='Learning rate')
+    parser.add_argument('--dropout', type=float, default=0.5, help='Dropout probability')
+    parser.add_argument('--num_layers', type=int, default=2, help='Number of GRU layers')
+    parser.add_argument('--decay_epochs', type=int, default=7, help='Number of epochs to divide lr')
+    parser.add_argument('--decay_co', type=float, default=2, help='Divide Learning Rate')
+
+    args = parser.parse_args()
+
+    train_loader, valid_loader, test_loader, vocab_size = load_data(data_path, args.batch_size)
 
     settings = [
         {'learning_rate': 0.001, 'dropout_prob': 0.5},
@@ -122,14 +133,14 @@ if __name__ == "__main__":
         dropout_prob = setting['dropout_prob']
         print(f"Running with Learning Rate: {learning_rate}, Dropout: {dropout_prob}")
         
-        train_ppl, val_ppl, model = train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, 
-                                         batch_size=batch_size, 
+        train_ppl, val_ppl, model = train(train_loader, valid_loader, vocab_size, args.num_layers, args.num_epochs, 
+                                         batch_size=args.batch_size, 
                                          model_save_name=f'RNN/GRU/models/train-checkpoint-lr{learning_rate}-dropout{dropout_prob}', 
                                          learning_rate=learning_rate, dropout_prob=dropout_prob)
 
         model_path = f'RNN/GRU/models/train-checkpoint-lr{learning_rate}-dropout{dropout_prob}-final.pt'
         model.load_state_dict(torch.load(model_path))
 
-        test_ppl = test(model, test_loader, vocab_size, batch_size)
+        test_ppl = test(model, test_loader, vocab_size, args.batch_size)
 
-        plot_ppl(learning_rate, dropout_prob, num_epochs, train_ppl, val_ppl, test_ppl)
+        plot_ppl(learning_rate, dropout_prob, args.num_epochs, train_ppl, val_ppl, test_ppl)
