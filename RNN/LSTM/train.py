@@ -72,7 +72,7 @@ def train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, batch_
         val_ppl = math.exp(avg_val_loss)
         print(f'Epoch {epoch+1}, Validation Perplexity: {val_ppl:.4f}')
 
-        if epoch >= 5:
+        if epoch >= 8:
             current_lr *= 0.5
             for param_group in optimizer.param_groups:
                 param_group['lr'] = current_lr
@@ -120,14 +120,14 @@ def plot_ppl(learning_rate, dropout_prob, num_epochs, train_ppl, val_ppl, test_p
 
 if __name__ == "__main__":
     data_path = 'RNN/ptb_data'  
-    batch_size = 4096
+    batch_size = 2048
     num_epochs = 15
     num_layers = 2
     train_loader, valid_loader, test_loader, vocab_size = load_data(data_path, batch_size)
 
     settings = [
-        {'learning_rate': 1.5, 'dropout_prob': 0.5},
-        {'learning_rate': 1.0, 'dropout_prob': 0.0},
+        {'learning_rate': 2.0, 'dropout_prob': 0.0},
+        {'learning_rate': 1.0, 'dropout_prob': 0.5},
     ]
 
     for setting in settings:
