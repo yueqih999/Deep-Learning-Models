@@ -15,3 +15,5 @@
 ## GRU with dropout
 
 ```python GRU/train.py```
+
+## Test with model under model folder
