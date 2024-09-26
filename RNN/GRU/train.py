@@ -126,7 +126,7 @@ if __name__ == "__main__":
 
     parser.add_argument('--batch_size', type=int, default=20, help='Batch size for training')
     parser.add_argument('--num_epochs', type=int, default=25, help='Number of epochs for training')
-    parser.add_argument('--learning_rate', type=float, default=0.001, help='Learning rate')
+    parser.add_argument('--learning_rate', type=float, default=0.0001, help='Learning rate')
     parser.add_argument('--dropout', type=float, default=0.5, help='Dropout probability')
     parser.add_argument('--num_layers', type=int, default=2, help='Number of GRU layers')
 
