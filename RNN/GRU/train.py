@@ -16,7 +16,7 @@ def train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, batch_
     model = GRU(vocab_size=vocab_size, hidden_size=200, num_layers=num_layers, dropout=dropout_prob).to(device)
     # model = torch.load()
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.AdamW(model.parameters(), lr=learning_rate, weight_decay=1e-5) 
+    optimizer = optim.Adam(model.parameters(), lr=learning_rate, weight_decay=1e-5) 
 
     train_losses = []
     val_losses = []
