@@ -2,6 +2,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu") 
+
 class GRU(nn.Module):
     def __init__(self, vocab_size, hidden_size, num_layers, dropout=0.5):
         super(GRU, self).__init__()
@@ -27,4 +29,5 @@ class GRU(nn.Module):
         return logits, hidden
     
     def init_hidden(self, batch_size):
-        return torch.zeros(self.num_layers, batch_size, self.hidden_size)
+        weight = next(self.parameters()).data
+        return torch.zeros(self.num_layers, batch_size, self.hidden_size).to(device)
