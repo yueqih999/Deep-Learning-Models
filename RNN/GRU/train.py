@@ -59,7 +59,6 @@ def train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, batch_
 
         model.eval() 
         val_loss = 0
-        val_tokens = 0
         with torch.no_grad():
             hidden = model.init_hidden(batch_size)
             for data, targets in valid_loader:
@@ -69,10 +68,9 @@ def train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, batch_
                 hidden = hidden.detach()
 
                 loss = criterion(logits.view(-1, vocab_size), targets.view(-1))
-                val_loss += loss.item() * targets.numel()
-                val_tokens += targets.numel()
+                val_loss += loss.item()
 
-        avg_val_loss = val_loss / val_tokens
+        avg_val_loss = val_loss / len(valid_loader)
         val_losses.append(avg_val_loss)
 
         val_ppl = math.exp(avg_val_loss)
