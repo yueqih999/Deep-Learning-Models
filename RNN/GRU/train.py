@@ -16,7 +16,7 @@ def train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, batch_
     model = GRU(vocab_size=vocab_size, hidden_size=200, num_layers=num_layers, dropout=dropout_prob).to(device)
     # model = torch.load()
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.AdamW(model.parameters(), lr=learning_rate) 
+    optimizer = optim.Adam(model.parameters(), lr=learning_rate, weight_decay=1e-5) 
 
     train_losses = []
     val_losses = []
@@ -59,7 +59,6 @@ def train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, batch_
 
         model.eval() 
         val_loss = 0
-        val_tokens = 0
         with torch.no_grad():
             hidden = model.init_hidden(batch_size)
             for data, targets in valid_loader:
@@ -69,10 +68,9 @@ def train(train_loader, valid_loader, vocab_size, num_layers, num_epochs, batch_
                 hidden = hidden.detach()
 
                 loss = criterion(logits.view(-1, vocab_size), targets.view(-1))
-                val_loss += loss.item() * targets.numel()
-                val_tokens += targets.numel()
+                val_loss += loss.item()
 
-        avg_val_loss = val_loss / val_tokens
+        avg_val_loss = val_loss / len(valid_loader)
         val_losses.append(avg_val_loss)
 
         val_ppl = math.exp(avg_val_loss)
@@ -128,7 +126,7 @@ if __name__ == "__main__":
 
     parser.add_argument('--batch_size', type=int, default=20, help='Batch size for training')
     parser.add_argument('--num_epochs', type=int, default=25, help='Number of epochs for training')
-    parser.add_argument('--learning_rate', type=float, default=0.001, help='Learning rate')
+    parser.add_argument('--learning_rate', type=float, default=0.0001, help='Learning rate')
     parser.add_argument('--dropout', type=float, default=0.5, help='Dropout probability')
     parser.add_argument('--num_layers', type=int, default=2, help='Number of GRU layers')
 
