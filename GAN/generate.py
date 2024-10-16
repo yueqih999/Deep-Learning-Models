@@ -16,11 +16,12 @@ def generate_images(generator, model, label, num_images):
 
 if __name__ == '__main__':
     generator = Generator().to(device)
-    generate_images(generator, 'dcgan', 0, 1)
-    generate_images(generator, 'dcgan', 3, 1)
+    for _ in range(2):
+        generate_images(generator, 'dcgan', 0, 1)
+        generate_images(generator, 'dcgan', 3, 1)
 
-    generate_images(generator, 'wgan', 0, 1)
-    generate_images(generator, 'wgan', 3, 1)
+        generate_images(generator, 'wgan', 0, 1)
+        generate_images(generator, 'wgan', 3, 1)
 
-    generate_images(generator, 'wgan_gp', 0, 1)
-    generate_images(generator, 'wgan_gp', 3, 1)
+        generate_images(generator, 'wgan_gp', 0, 1)
+        generate_images(generator, 'wgan_gp', 3, 1)
