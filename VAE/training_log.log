@@ -1179,3 +1179,558 @@ Training with 3000 labels:
 2024-10-06 20:46:59,136 - INFO - Labels: 3000, Epoch: 40, Test Loss: 131.8093
 2024-10-06 20:47:01,036 - INFO - Labels: 3000, SVM Test Accuracy: 0.8632, Test Error Rate: 0.1368
 2024-10-06 20:47:01,037 - INFO - Best SVM model saved with Test Error Rate: 0.1368
+2024-10-17 15:15:20,994 - INFO - 
+Training with 100 labels:
+2024-10-17 15:15:21,092 - INFO - Labels: 100, Epoch: 1, Train Loss: 541.6474
+2024-10-17 15:15:21,765 - INFO - Labels: 100, Epoch: 1, Test Loss: 525.2317
+2024-10-17 15:15:21,776 - INFO - Best VAE model saved with Test Loss: 525.2317
+2024-10-17 15:15:21,793 - INFO - Labels: 100, Epoch: 2, Train Loss: 519.9508
+2024-10-17 15:15:22,580 - INFO - Labels: 100, Epoch: 2, Test Loss: 488.2465
+2024-10-17 15:15:22,590 - INFO - Best VAE model saved with Test Loss: 488.2465
+2024-10-17 15:15:22,608 - INFO - Labels: 100, Epoch: 3, Train Loss: 475.6890
+2024-10-17 15:15:23,382 - INFO - Labels: 100, Epoch: 3, Test Loss: 416.9288
+2024-10-17 15:15:23,392 - INFO - Best VAE model saved with Test Loss: 416.9288
+2024-10-17 15:15:23,412 - INFO - Labels: 100, Epoch: 4, Train Loss: 394.3045
+2024-10-17 15:15:24,152 - INFO - Labels: 100, Epoch: 4, Test Loss: 315.2471
+2024-10-17 15:15:24,161 - INFO - Best VAE model saved with Test Loss: 315.2471
+2024-10-17 15:15:24,178 - INFO - Labels: 100, Epoch: 5, Train Loss: 303.2822
+2024-10-17 15:15:24,949 - INFO - Labels: 100, Epoch: 5, Test Loss: 294.1195
+2024-10-17 15:15:24,957 - INFO - Best VAE model saved with Test Loss: 294.1195
+2024-10-17 15:15:24,978 - INFO - Labels: 100, Epoch: 6, Train Loss: 274.6594
+2024-10-17 15:15:25,772 - INFO - Labels: 100, Epoch: 6, Test Loss: 254.7749
+2024-10-17 15:15:25,782 - INFO - Best VAE model saved with Test Loss: 254.7749
+2024-10-17 15:15:25,800 - INFO - Labels: 100, Epoch: 7, Train Loss: 237.3724
+2024-10-17 15:15:26,577 - INFO - Labels: 100, Epoch: 7, Test Loss: 225.5895
+2024-10-17 15:15:26,587 - INFO - Best VAE model saved with Test Loss: 225.5895
+2024-10-17 15:15:26,603 - INFO - Labels: 100, Epoch: 8, Train Loss: 217.2978
+2024-10-17 15:15:27,382 - INFO - Labels: 100, Epoch: 8, Test Loss: 216.7871
+2024-10-17 15:15:27,391 - INFO - Best VAE model saved with Test Loss: 216.7871
+2024-10-17 15:15:27,409 - INFO - Labels: 100, Epoch: 9, Train Loss: 210.1669
+2024-10-17 15:15:28,194 - INFO - Labels: 100, Epoch: 9, Test Loss: 216.1515
+2024-10-17 15:15:28,203 - INFO - Best VAE model saved with Test Loss: 216.1515
+2024-10-17 15:15:28,220 - INFO - Labels: 100, Epoch: 10, Train Loss: 212.6318
+2024-10-17 15:15:29,047 - INFO - Labels: 100, Epoch: 10, Test Loss: 217.1525
+2024-10-17 15:15:29,065 - INFO - Labels: 100, Epoch: 11, Train Loss: 212.0080
+2024-10-17 15:15:29,790 - INFO - Labels: 100, Epoch: 11, Test Loss: 215.9159
+2024-10-17 15:15:29,799 - INFO - Best VAE model saved with Test Loss: 215.9159
+2024-10-17 15:15:29,817 - INFO - Labels: 100, Epoch: 12, Train Loss: 210.2846
+2024-10-17 15:15:30,550 - INFO - Labels: 100, Epoch: 12, Test Loss: 213.8244
+2024-10-17 15:15:30,559 - INFO - Best VAE model saved with Test Loss: 213.8244
+2024-10-17 15:15:30,577 - INFO - Labels: 100, Epoch: 13, Train Loss: 207.7886
+2024-10-17 15:15:31,334 - INFO - Labels: 100, Epoch: 13, Test Loss: 212.4722
+2024-10-17 15:15:31,343 - INFO - Best VAE model saved with Test Loss: 212.4722
+2024-10-17 15:15:31,361 - INFO - Labels: 100, Epoch: 14, Train Loss: 205.1009
+2024-10-17 15:15:32,146 - INFO - Labels: 100, Epoch: 14, Test Loss: 212.6068
+2024-10-17 15:15:32,166 - INFO - Labels: 100, Epoch: 15, Train Loss: 203.9198
+2024-10-17 15:15:32,986 - INFO - Labels: 100, Epoch: 15, Test Loss: 213.1057
+2024-10-17 15:15:33,004 - INFO - Labels: 100, Epoch: 16, Train Loss: 205.3353
+2024-10-17 15:15:33,774 - INFO - Labels: 100, Epoch: 16, Test Loss: 212.8751
+2024-10-17 15:15:33,792 - INFO - Labels: 100, Epoch: 17, Train Loss: 203.9281
+2024-10-17 15:15:34,542 - INFO - Labels: 100, Epoch: 17, Test Loss: 211.7474
+2024-10-17 15:15:34,551 - INFO - Best VAE model saved with Test Loss: 211.7474
+2024-10-17 15:15:34,568 - INFO - Labels: 100, Epoch: 18, Train Loss: 202.7437
+2024-10-17 15:15:35,332 - INFO - Labels: 100, Epoch: 18, Test Loss: 210.5225
+2024-10-17 15:15:35,341 - INFO - Best VAE model saved with Test Loss: 210.5225
+2024-10-17 15:15:35,359 - INFO - Labels: 100, Epoch: 19, Train Loss: 203.0466
+2024-10-17 15:15:36,130 - INFO - Labels: 100, Epoch: 19, Test Loss: 209.3374
+2024-10-17 15:15:36,140 - INFO - Best VAE model saved with Test Loss: 209.3374
+2024-10-17 15:15:36,157 - INFO - Labels: 100, Epoch: 20, Train Loss: 202.6911
+2024-10-17 15:15:36,914 - INFO - Labels: 100, Epoch: 20, Test Loss: 208.8715
+2024-10-17 15:15:36,923 - INFO - Best VAE model saved with Test Loss: 208.8715
+2024-10-17 15:15:36,941 - INFO - Labels: 100, Epoch: 21, Train Loss: 201.8039
+2024-10-17 15:15:37,701 - INFO - Labels: 100, Epoch: 21, Test Loss: 208.6874
+2024-10-17 15:15:37,710 - INFO - Best VAE model saved with Test Loss: 208.6874
+2024-10-17 15:15:37,728 - INFO - Labels: 100, Epoch: 22, Train Loss: 201.0818
+2024-10-17 15:15:38,488 - INFO - Labels: 100, Epoch: 22, Test Loss: 208.5359
+2024-10-17 15:15:38,497 - INFO - Best VAE model saved with Test Loss: 208.5359
+2024-10-17 15:15:38,516 - INFO - Labels: 100, Epoch: 23, Train Loss: 200.9825
+2024-10-17 15:15:39,278 - INFO - Labels: 100, Epoch: 23, Test Loss: 208.0501
+2024-10-17 15:15:39,287 - INFO - Best VAE model saved with Test Loss: 208.0501
+2024-10-17 15:15:39,304 - INFO - Labels: 100, Epoch: 24, Train Loss: 200.3452
+2024-10-17 15:15:40,125 - INFO - Labels: 100, Epoch: 24, Test Loss: 207.4651
+2024-10-17 15:15:40,134 - INFO - Best VAE model saved with Test Loss: 207.4651
+2024-10-17 15:15:40,154 - INFO - Labels: 100, Epoch: 25, Train Loss: 199.8254
+2024-10-17 15:15:40,914 - INFO - Labels: 100, Epoch: 25, Test Loss: 207.1934
+2024-10-17 15:15:40,923 - INFO - Best VAE model saved with Test Loss: 207.1934
+2024-10-17 15:15:40,940 - INFO - Labels: 100, Epoch: 26, Train Loss: 199.5015
+2024-10-17 15:15:41,701 - INFO - Labels: 100, Epoch: 26, Test Loss: 207.0346
+2024-10-17 15:15:41,708 - INFO - Best VAE model saved with Test Loss: 207.0346
+2024-10-17 15:15:41,725 - INFO - Labels: 100, Epoch: 27, Train Loss: 198.8324
+2024-10-17 15:15:42,496 - INFO - Labels: 100, Epoch: 27, Test Loss: 206.9281
+2024-10-17 15:15:42,505 - INFO - Best VAE model saved with Test Loss: 206.9281
+2024-10-17 15:15:42,521 - INFO - Labels: 100, Epoch: 28, Train Loss: 197.7220
+2024-10-17 15:15:43,274 - INFO - Labels: 100, Epoch: 28, Test Loss: 206.4172
+2024-10-17 15:15:43,283 - INFO - Best VAE model saved with Test Loss: 206.4172
+2024-10-17 15:15:43,301 - INFO - Labels: 100, Epoch: 29, Train Loss: 197.8112
+2024-10-17 15:15:44,062 - INFO - Labels: 100, Epoch: 29, Test Loss: 205.9626
+2024-10-17 15:15:44,072 - INFO - Best VAE model saved with Test Loss: 205.9626
+2024-10-17 15:15:44,088 - INFO - Labels: 100, Epoch: 30, Train Loss: 197.0468
+2024-10-17 15:15:44,868 - INFO - Labels: 100, Epoch: 30, Test Loss: 205.8349
+2024-10-17 15:15:44,877 - INFO - Best VAE model saved with Test Loss: 205.8349
+2024-10-17 15:15:44,894 - INFO - Labels: 100, Epoch: 31, Train Loss: 196.4033
+2024-10-17 15:15:45,662 - INFO - Labels: 100, Epoch: 31, Test Loss: 205.4138
+2024-10-17 15:15:45,671 - INFO - Best VAE model saved with Test Loss: 205.4138
+2024-10-17 15:15:45,687 - INFO - Labels: 100, Epoch: 32, Train Loss: 196.7658
+2024-10-17 15:15:46,472 - INFO - Labels: 100, Epoch: 32, Test Loss: 205.3044
+2024-10-17 15:15:46,482 - INFO - Best VAE model saved with Test Loss: 205.3044
+2024-10-17 15:15:46,500 - INFO - Labels: 100, Epoch: 33, Train Loss: 196.9300
+2024-10-17 15:15:47,287 - INFO - Labels: 100, Epoch: 33, Test Loss: 205.0046
+2024-10-17 15:15:47,296 - INFO - Best VAE model saved with Test Loss: 205.0046
+2024-10-17 15:15:47,318 - INFO - Labels: 100, Epoch: 34, Train Loss: 195.4297
+2024-10-17 15:15:48,160 - INFO - Labels: 100, Epoch: 34, Test Loss: 204.9174
+2024-10-17 15:15:48,170 - INFO - Best VAE model saved with Test Loss: 204.9174
+2024-10-17 15:15:48,188 - INFO - Labels: 100, Epoch: 35, Train Loss: 195.0637
+2024-10-17 15:15:49,019 - INFO - Labels: 100, Epoch: 35, Test Loss: 204.9181
+2024-10-17 15:15:49,040 - INFO - Labels: 100, Epoch: 36, Train Loss: 196.0184
+2024-10-17 15:15:49,848 - INFO - Labels: 100, Epoch: 36, Test Loss: 205.1980
+2024-10-17 15:15:49,866 - INFO - Labels: 100, Epoch: 37, Train Loss: 195.4973
+2024-10-17 15:15:50,660 - INFO - Labels: 100, Epoch: 37, Test Loss: 204.6270
+2024-10-17 15:15:50,669 - INFO - Best VAE model saved with Test Loss: 204.6270
+2024-10-17 15:15:50,688 - INFO - Labels: 100, Epoch: 38, Train Loss: 195.2503
+2024-10-17 15:15:51,442 - INFO - Labels: 100, Epoch: 38, Test Loss: 204.3234
+2024-10-17 15:15:51,451 - INFO - Best VAE model saved with Test Loss: 204.3234
+2024-10-17 15:15:51,469 - INFO - Labels: 100, Epoch: 39, Train Loss: 195.8845
+2024-10-17 15:15:52,296 - INFO - Labels: 100, Epoch: 39, Test Loss: 204.1968
+2024-10-17 15:15:52,305 - INFO - Best VAE model saved with Test Loss: 204.1968
+2024-10-17 15:15:52,321 - INFO - Labels: 100, Epoch: 40, Train Loss: 194.9091
+2024-10-17 15:15:53,097 - INFO - Labels: 100, Epoch: 40, Test Loss: 205.0865
+2024-10-17 15:15:53,754 - INFO - Labels: 100, SVM Test Accuracy: 0.2379, Test Error Rate: 0.7621
+2024-10-17 15:15:53,755 - INFO - Best SVM model saved with Test Error Rate: 0.7621
+2024-10-17 15:15:53,755 - INFO - 
+Training with 600 labels:
+2024-10-17 15:15:53,848 - INFO - Labels: 600, Epoch: 1, Train Loss: 199.0543
+2024-10-17 15:15:54,485 - INFO - Labels: 600, Epoch: 1, Test Loss: 202.7568
+2024-10-17 15:15:54,493 - INFO - Best VAE model saved with Test Loss: 202.7568
+2024-10-17 15:15:54,574 - INFO - Labels: 600, Epoch: 2, Train Loss: 197.0356
+2024-10-17 15:15:55,345 - INFO - Labels: 600, Epoch: 2, Test Loss: 201.7789
+2024-10-17 15:15:55,353 - INFO - Best VAE model saved with Test Loss: 201.7789
+2024-10-17 15:15:55,444 - INFO - Labels: 600, Epoch: 3, Train Loss: 195.5275
+2024-10-17 15:15:56,222 - INFO - Labels: 600, Epoch: 3, Test Loss: 199.7558
+2024-10-17 15:15:56,231 - INFO - Best VAE model saved with Test Loss: 199.7558
+2024-10-17 15:15:56,324 - INFO - Labels: 600, Epoch: 4, Train Loss: 194.3766
+2024-10-17 15:15:57,078 - INFO - Labels: 600, Epoch: 4, Test Loss: 198.1555
+2024-10-17 15:15:57,086 - INFO - Best VAE model saved with Test Loss: 198.1555
+2024-10-17 15:15:57,179 - INFO - Labels: 600, Epoch: 5, Train Loss: 192.8394
+2024-10-17 15:15:57,931 - INFO - Labels: 600, Epoch: 5, Test Loss: 198.1988
+2024-10-17 15:15:58,016 - INFO - Labels: 600, Epoch: 6, Train Loss: 192.8743
+2024-10-17 15:15:58,768 - INFO - Labels: 600, Epoch: 6, Test Loss: 197.1687
+2024-10-17 15:15:58,777 - INFO - Best VAE model saved with Test Loss: 197.1687
+2024-10-17 15:15:58,864 - INFO - Labels: 600, Epoch: 7, Train Loss: 192.2015
+2024-10-17 15:15:59,637 - INFO - Labels: 600, Epoch: 7, Test Loss: 197.0551
+2024-10-17 15:15:59,646 - INFO - Best VAE model saved with Test Loss: 197.0551
+2024-10-17 15:15:59,737 - INFO - Labels: 600, Epoch: 8, Train Loss: 192.1718
+2024-10-17 15:16:00,501 - INFO - Labels: 600, Epoch: 8, Test Loss: 196.6845
+2024-10-17 15:16:00,510 - INFO - Best VAE model saved with Test Loss: 196.6845
+2024-10-17 15:16:00,660 - INFO - Labels: 600, Epoch: 9, Train Loss: 192.0082
+2024-10-17 15:16:01,433 - INFO - Labels: 600, Epoch: 9, Test Loss: 196.3788
+2024-10-17 15:16:01,444 - INFO - Best VAE model saved with Test Loss: 196.3788
+2024-10-17 15:16:01,539 - INFO - Labels: 600, Epoch: 10, Train Loss: 191.3492
+2024-10-17 15:16:02,399 - INFO - Labels: 600, Epoch: 10, Test Loss: 195.2130
+2024-10-17 15:16:02,409 - INFO - Best VAE model saved with Test Loss: 195.2130
+2024-10-17 15:16:02,502 - INFO - Labels: 600, Epoch: 11, Train Loss: 190.0869
+2024-10-17 15:16:03,305 - INFO - Labels: 600, Epoch: 11, Test Loss: 194.8159
+2024-10-17 15:16:03,315 - INFO - Best VAE model saved with Test Loss: 194.8159
+2024-10-17 15:16:03,409 - INFO - Labels: 600, Epoch: 12, Train Loss: 190.1671
+2024-10-17 15:16:04,192 - INFO - Labels: 600, Epoch: 12, Test Loss: 194.5249
+2024-10-17 15:16:04,201 - INFO - Best VAE model saved with Test Loss: 194.5249
+2024-10-17 15:16:04,311 - INFO - Labels: 600, Epoch: 13, Train Loss: 189.2063
+2024-10-17 15:16:05,113 - INFO - Labels: 600, Epoch: 13, Test Loss: 194.3052
+2024-10-17 15:16:05,122 - INFO - Best VAE model saved with Test Loss: 194.3052
+2024-10-17 15:16:05,221 - INFO - Labels: 600, Epoch: 14, Train Loss: 189.3048
+2024-10-17 15:16:06,098 - INFO - Labels: 600, Epoch: 14, Test Loss: 193.6489
+2024-10-17 15:16:06,109 - INFO - Best VAE model saved with Test Loss: 193.6489
+2024-10-17 15:16:06,237 - INFO - Labels: 600, Epoch: 15, Train Loss: 189.0978
+2024-10-17 15:16:07,301 - INFO - Labels: 600, Epoch: 15, Test Loss: 193.7171
+2024-10-17 15:16:07,400 - INFO - Labels: 600, Epoch: 16, Train Loss: 188.5669
+2024-10-17 15:16:08,240 - INFO - Labels: 600, Epoch: 16, Test Loss: 193.0380
+2024-10-17 15:16:08,251 - INFO - Best VAE model saved with Test Loss: 193.0380
+2024-10-17 15:16:08,389 - INFO - Labels: 600, Epoch: 17, Train Loss: 188.2541
+2024-10-17 15:16:09,350 - INFO - Labels: 600, Epoch: 17, Test Loss: 192.9642
+2024-10-17 15:16:09,360 - INFO - Best VAE model saved with Test Loss: 192.9642
+2024-10-17 15:16:09,486 - INFO - Labels: 600, Epoch: 18, Train Loss: 187.9519
+2024-10-17 15:16:10,530 - INFO - Labels: 600, Epoch: 18, Test Loss: 192.6908
+2024-10-17 15:16:10,538 - INFO - Best VAE model saved with Test Loss: 192.6908
+2024-10-17 15:16:10,660 - INFO - Labels: 600, Epoch: 19, Train Loss: 187.4653
+2024-10-17 15:16:11,594 - INFO - Labels: 600, Epoch: 19, Test Loss: 191.6105
+2024-10-17 15:16:11,605 - INFO - Best VAE model saved with Test Loss: 191.6105
+2024-10-17 15:16:11,762 - INFO - Labels: 600, Epoch: 20, Train Loss: 186.5042
+2024-10-17 15:16:12,820 - INFO - Labels: 600, Epoch: 20, Test Loss: 191.0622
+2024-10-17 15:16:12,831 - INFO - Best VAE model saved with Test Loss: 191.0622
+2024-10-17 15:16:12,932 - INFO - Labels: 600, Epoch: 21, Train Loss: 185.9049
+2024-10-17 15:16:13,774 - INFO - Labels: 600, Epoch: 21, Test Loss: 190.2558
+2024-10-17 15:16:13,785 - INFO - Best VAE model saved with Test Loss: 190.2558
+2024-10-17 15:16:13,913 - INFO - Labels: 600, Epoch: 22, Train Loss: 184.7518
+2024-10-17 15:16:14,746 - INFO - Labels: 600, Epoch: 22, Test Loss: 189.1636
+2024-10-17 15:16:14,756 - INFO - Best VAE model saved with Test Loss: 189.1636
+2024-10-17 15:16:14,857 - INFO - Labels: 600, Epoch: 23, Train Loss: 184.2210
+2024-10-17 15:16:15,814 - INFO - Labels: 600, Epoch: 23, Test Loss: 188.2675
+2024-10-17 15:16:15,824 - INFO - Best VAE model saved with Test Loss: 188.2675
+2024-10-17 15:16:15,928 - INFO - Labels: 600, Epoch: 24, Train Loss: 183.4543
+2024-10-17 15:16:16,746 - INFO - Labels: 600, Epoch: 24, Test Loss: 187.0411
+2024-10-17 15:16:16,756 - INFO - Best VAE model saved with Test Loss: 187.0411
+2024-10-17 15:16:16,846 - INFO - Labels: 600, Epoch: 25, Train Loss: 182.5790
+2024-10-17 15:16:17,670 - INFO - Labels: 600, Epoch: 25, Test Loss: 186.9833
+2024-10-17 15:16:17,679 - INFO - Best VAE model saved with Test Loss: 186.9833
+2024-10-17 15:16:17,777 - INFO - Labels: 600, Epoch: 26, Train Loss: 181.7609
+2024-10-17 15:16:18,610 - INFO - Labels: 600, Epoch: 26, Test Loss: 185.5232
+2024-10-17 15:16:18,620 - INFO - Best VAE model saved with Test Loss: 185.5232
+2024-10-17 15:16:18,716 - INFO - Labels: 600, Epoch: 27, Train Loss: 181.4332
+2024-10-17 15:16:19,515 - INFO - Labels: 600, Epoch: 27, Test Loss: 186.1360
+2024-10-17 15:16:19,622 - INFO - Labels: 600, Epoch: 28, Train Loss: 180.3898
+2024-10-17 15:16:20,429 - INFO - Labels: 600, Epoch: 28, Test Loss: 184.6166
+2024-10-17 15:16:20,437 - INFO - Best VAE model saved with Test Loss: 184.6166
+2024-10-17 15:16:20,554 - INFO - Labels: 600, Epoch: 29, Train Loss: 179.6954
+2024-10-17 15:16:21,383 - INFO - Labels: 600, Epoch: 29, Test Loss: 185.0383
+2024-10-17 15:16:21,473 - INFO - Labels: 600, Epoch: 30, Train Loss: 179.5769
+2024-10-17 15:16:22,282 - INFO - Labels: 600, Epoch: 30, Test Loss: 184.3636
+2024-10-17 15:16:22,292 - INFO - Best VAE model saved with Test Loss: 184.3636
+2024-10-17 15:16:22,387 - INFO - Labels: 600, Epoch: 31, Train Loss: 179.1657
+2024-10-17 15:16:23,188 - INFO - Labels: 600, Epoch: 31, Test Loss: 183.6150
+2024-10-17 15:16:23,198 - INFO - Best VAE model saved with Test Loss: 183.6150
+2024-10-17 15:16:23,302 - INFO - Labels: 600, Epoch: 32, Train Loss: 177.9215
+2024-10-17 15:16:24,125 - INFO - Labels: 600, Epoch: 32, Test Loss: 182.3712
+2024-10-17 15:16:24,134 - INFO - Best VAE model saved with Test Loss: 182.3712
+2024-10-17 15:16:24,244 - INFO - Labels: 600, Epoch: 33, Train Loss: 177.9414
+2024-10-17 15:16:25,114 - INFO - Labels: 600, Epoch: 33, Test Loss: 182.0908
+2024-10-17 15:16:25,123 - INFO - Best VAE model saved with Test Loss: 182.0908
+2024-10-17 15:16:25,234 - INFO - Labels: 600, Epoch: 34, Train Loss: 177.0701
+2024-10-17 15:16:26,189 - INFO - Labels: 600, Epoch: 34, Test Loss: 182.2089
+2024-10-17 15:16:26,279 - INFO - Labels: 600, Epoch: 35, Train Loss: 176.2402
+2024-10-17 15:16:27,120 - INFO - Labels: 600, Epoch: 35, Test Loss: 180.8152
+2024-10-17 15:16:27,130 - INFO - Best VAE model saved with Test Loss: 180.8152
+2024-10-17 15:16:27,225 - INFO - Labels: 600, Epoch: 36, Train Loss: 175.5553
+2024-10-17 15:16:28,053 - INFO - Labels: 600, Epoch: 36, Test Loss: 180.5306
+2024-10-17 15:16:28,062 - INFO - Best VAE model saved with Test Loss: 180.5306
+2024-10-17 15:16:28,157 - INFO - Labels: 600, Epoch: 37, Train Loss: 174.5964
+2024-10-17 15:16:28,957 - INFO - Labels: 600, Epoch: 37, Test Loss: 179.7894
+2024-10-17 15:16:28,967 - INFO - Best VAE model saved with Test Loss: 179.7894
+2024-10-17 15:16:29,072 - INFO - Labels: 600, Epoch: 38, Train Loss: 173.9483
+2024-10-17 15:16:29,859 - INFO - Labels: 600, Epoch: 38, Test Loss: 179.9133
+2024-10-17 15:16:29,946 - INFO - Labels: 600, Epoch: 39, Train Loss: 173.2992
+2024-10-17 15:16:30,735 - INFO - Labels: 600, Epoch: 39, Test Loss: 178.1407
+2024-10-17 15:16:30,744 - INFO - Best VAE model saved with Test Loss: 178.1407
+2024-10-17 15:16:30,836 - INFO - Labels: 600, Epoch: 40, Train Loss: 172.7894
+2024-10-17 15:16:31,665 - INFO - Labels: 600, Epoch: 40, Test Loss: 177.7411
+2024-10-17 15:16:31,677 - INFO - Best VAE model saved with Test Loss: 177.7411
+2024-10-17 15:16:32,927 - INFO - Labels: 600, SVM Test Accuracy: 0.6204, Test Error Rate: 0.3796
+2024-10-17 15:16:32,928 - INFO - Best SVM model saved with Test Error Rate: 0.3796
+2024-10-17 15:16:32,928 - INFO - 
+Training with 1000 labels:
+2024-10-17 15:16:33,057 - INFO - Labels: 1000, Epoch: 1, Train Loss: 175.2329
+2024-10-17 15:16:33,650 - INFO - Labels: 1000, Epoch: 1, Test Loss: 177.8969
+2024-10-17 15:16:33,660 - INFO - Best VAE model saved with Test Loss: 177.8969
+2024-10-17 15:16:33,781 - INFO - Labels: 1000, Epoch: 2, Train Loss: 173.8092
+2024-10-17 15:16:34,537 - INFO - Labels: 1000, Epoch: 2, Test Loss: 176.7444
+2024-10-17 15:16:34,546 - INFO - Best VAE model saved with Test Loss: 176.7444
+2024-10-17 15:16:34,701 - INFO - Labels: 1000, Epoch: 3, Train Loss: 173.1266
+2024-10-17 15:16:35,589 - INFO - Labels: 1000, Epoch: 3, Test Loss: 175.3494
+2024-10-17 15:16:35,598 - INFO - Best VAE model saved with Test Loss: 175.3494
+2024-10-17 15:16:35,761 - INFO - Labels: 1000, Epoch: 4, Train Loss: 171.8420
+2024-10-17 15:16:36,559 - INFO - Labels: 1000, Epoch: 4, Test Loss: 173.8555
+2024-10-17 15:16:36,569 - INFO - Best VAE model saved with Test Loss: 173.8555
+2024-10-17 15:16:36,735 - INFO - Labels: 1000, Epoch: 5, Train Loss: 170.2409
+2024-10-17 15:16:37,547 - INFO - Labels: 1000, Epoch: 5, Test Loss: 172.9986
+2024-10-17 15:16:37,555 - INFO - Best VAE model saved with Test Loss: 172.9986
+2024-10-17 15:16:37,699 - INFO - Labels: 1000, Epoch: 6, Train Loss: 169.5532
+2024-10-17 15:16:38,473 - INFO - Labels: 1000, Epoch: 6, Test Loss: 171.4551
+2024-10-17 15:16:38,483 - INFO - Best VAE model saved with Test Loss: 171.4551
+2024-10-17 15:16:38,630 - INFO - Labels: 1000, Epoch: 7, Train Loss: 167.7888
+2024-10-17 15:16:39,416 - INFO - Labels: 1000, Epoch: 7, Test Loss: 170.5088
+2024-10-17 15:16:39,425 - INFO - Best VAE model saved with Test Loss: 170.5088
+2024-10-17 15:16:39,570 - INFO - Labels: 1000, Epoch: 8, Train Loss: 166.4219
+2024-10-17 15:16:40,334 - INFO - Labels: 1000, Epoch: 8, Test Loss: 169.4823
+2024-10-17 15:16:40,343 - INFO - Best VAE model saved with Test Loss: 169.4823
+2024-10-17 15:16:40,481 - INFO - Labels: 1000, Epoch: 9, Train Loss: 165.4173
+2024-10-17 15:16:41,251 - INFO - Labels: 1000, Epoch: 9, Test Loss: 169.1885
+2024-10-17 15:16:41,260 - INFO - Best VAE model saved with Test Loss: 169.1885
+2024-10-17 15:16:41,415 - INFO - Labels: 1000, Epoch: 10, Train Loss: 164.1118
+2024-10-17 15:16:42,226 - INFO - Labels: 1000, Epoch: 10, Test Loss: 168.1835
+2024-10-17 15:16:42,237 - INFO - Best VAE model saved with Test Loss: 168.1835
+2024-10-17 15:16:42,385 - INFO - Labels: 1000, Epoch: 11, Train Loss: 163.2127
+2024-10-17 15:16:43,183 - INFO - Labels: 1000, Epoch: 11, Test Loss: 167.6971
+2024-10-17 15:16:43,193 - INFO - Best VAE model saved with Test Loss: 167.6971
+2024-10-17 15:16:43,352 - INFO - Labels: 1000, Epoch: 12, Train Loss: 162.2039
+2024-10-17 15:16:44,197 - INFO - Labels: 1000, Epoch: 12, Test Loss: 165.3423
+2024-10-17 15:16:44,206 - INFO - Best VAE model saved with Test Loss: 165.3423
+2024-10-17 15:16:44,353 - INFO - Labels: 1000, Epoch: 13, Train Loss: 160.6454
+2024-10-17 15:16:45,113 - INFO - Labels: 1000, Epoch: 13, Test Loss: 165.6145
+2024-10-17 15:16:45,260 - INFO - Labels: 1000, Epoch: 14, Train Loss: 160.8634
+2024-10-17 15:16:46,097 - INFO - Labels: 1000, Epoch: 14, Test Loss: 164.7134
+2024-10-17 15:16:46,108 - INFO - Best VAE model saved with Test Loss: 164.7134
+2024-10-17 15:16:46,265 - INFO - Labels: 1000, Epoch: 15, Train Loss: 158.9429
+2024-10-17 15:16:47,055 - INFO - Labels: 1000, Epoch: 15, Test Loss: 163.6101
+2024-10-17 15:16:47,063 - INFO - Best VAE model saved with Test Loss: 163.6101
+2024-10-17 15:16:47,224 - INFO - Labels: 1000, Epoch: 16, Train Loss: 158.2284
+2024-10-17 15:16:48,009 - INFO - Labels: 1000, Epoch: 16, Test Loss: 162.6202
+2024-10-17 15:16:48,018 - INFO - Best VAE model saved with Test Loss: 162.6202
+2024-10-17 15:16:48,176 - INFO - Labels: 1000, Epoch: 17, Train Loss: 156.5207
+2024-10-17 15:16:48,973 - INFO - Labels: 1000, Epoch: 17, Test Loss: 161.1169
+2024-10-17 15:16:48,982 - INFO - Best VAE model saved with Test Loss: 161.1169
+2024-10-17 15:16:49,147 - INFO - Labels: 1000, Epoch: 18, Train Loss: 155.3578
+2024-10-17 15:16:49,922 - INFO - Labels: 1000, Epoch: 18, Test Loss: 160.0156
+2024-10-17 15:16:49,931 - INFO - Best VAE model saved with Test Loss: 160.0156
+2024-10-17 15:16:50,077 - INFO - Labels: 1000, Epoch: 19, Train Loss: 154.5352
+2024-10-17 15:16:50,848 - INFO - Labels: 1000, Epoch: 19, Test Loss: 159.3244
+2024-10-17 15:16:50,858 - INFO - Best VAE model saved with Test Loss: 159.3244
+2024-10-17 15:16:51,012 - INFO - Labels: 1000, Epoch: 20, Train Loss: 153.7208
+2024-10-17 15:16:51,785 - INFO - Labels: 1000, Epoch: 20, Test Loss: 159.0686
+2024-10-17 15:16:51,795 - INFO - Best VAE model saved with Test Loss: 159.0686
+2024-10-17 15:16:51,936 - INFO - Labels: 1000, Epoch: 21, Train Loss: 152.3913
+2024-10-17 15:16:52,769 - INFO - Labels: 1000, Epoch: 21, Test Loss: 157.8141
+2024-10-17 15:16:52,780 - INFO - Best VAE model saved with Test Loss: 157.8141
+2024-10-17 15:16:53,056 - INFO - Labels: 1000, Epoch: 22, Train Loss: 150.6282
+2024-10-17 15:16:53,886 - INFO - Labels: 1000, Epoch: 22, Test Loss: 156.9657
+2024-10-17 15:16:53,896 - INFO - Best VAE model saved with Test Loss: 156.9657
+2024-10-17 15:16:54,045 - INFO - Labels: 1000, Epoch: 23, Train Loss: 149.9583
+2024-10-17 15:16:54,801 - INFO - Labels: 1000, Epoch: 23, Test Loss: 156.1366
+2024-10-17 15:16:54,811 - INFO - Best VAE model saved with Test Loss: 156.1366
+2024-10-17 15:16:54,956 - INFO - Labels: 1000, Epoch: 24, Train Loss: 148.3061
+2024-10-17 15:16:55,694 - INFO - Labels: 1000, Epoch: 24, Test Loss: 154.5211
+2024-10-17 15:16:55,703 - INFO - Best VAE model saved with Test Loss: 154.5211
+2024-10-17 15:16:55,854 - INFO - Labels: 1000, Epoch: 25, Train Loss: 147.3090
+2024-10-17 15:16:56,772 - INFO - Labels: 1000, Epoch: 25, Test Loss: 153.8672
+2024-10-17 15:16:56,782 - INFO - Best VAE model saved with Test Loss: 153.8672
+2024-10-17 15:16:56,927 - INFO - Labels: 1000, Epoch: 26, Train Loss: 146.9827
+2024-10-17 15:16:57,761 - INFO - Labels: 1000, Epoch: 26, Test Loss: 152.9938
+2024-10-17 15:16:57,770 - INFO - Best VAE model saved with Test Loss: 152.9938
+2024-10-17 15:16:57,927 - INFO - Labels: 1000, Epoch: 27, Train Loss: 145.8931
+2024-10-17 15:16:58,889 - INFO - Labels: 1000, Epoch: 27, Test Loss: 151.7480
+2024-10-17 15:16:58,898 - INFO - Best VAE model saved with Test Loss: 151.7480
+2024-10-17 15:16:59,075 - INFO - Labels: 1000, Epoch: 28, Train Loss: 144.2349
+2024-10-17 15:17:00,029 - INFO - Labels: 1000, Epoch: 28, Test Loss: 151.6516
+2024-10-17 15:17:00,040 - INFO - Best VAE model saved with Test Loss: 151.6516
+2024-10-17 15:17:00,230 - INFO - Labels: 1000, Epoch: 29, Train Loss: 143.9040
+2024-10-17 15:17:01,028 - INFO - Labels: 1000, Epoch: 29, Test Loss: 150.8648
+2024-10-17 15:17:01,037 - INFO - Best VAE model saved with Test Loss: 150.8648
+2024-10-17 15:17:01,192 - INFO - Labels: 1000, Epoch: 30, Train Loss: 143.1624
+2024-10-17 15:17:02,080 - INFO - Labels: 1000, Epoch: 30, Test Loss: 150.3780
+2024-10-17 15:17:02,089 - INFO - Best VAE model saved with Test Loss: 150.3780
+2024-10-17 15:17:02,255 - INFO - Labels: 1000, Epoch: 31, Train Loss: 141.8614
+2024-10-17 15:17:03,019 - INFO - Labels: 1000, Epoch: 31, Test Loss: 149.4978
+2024-10-17 15:17:03,029 - INFO - Best VAE model saved with Test Loss: 149.4978
+2024-10-17 15:17:03,174 - INFO - Labels: 1000, Epoch: 32, Train Loss: 140.9755
+2024-10-17 15:17:03,985 - INFO - Labels: 1000, Epoch: 32, Test Loss: 148.8199
+2024-10-17 15:17:03,994 - INFO - Best VAE model saved with Test Loss: 148.8199
+2024-10-17 15:17:04,140 - INFO - Labels: 1000, Epoch: 33, Train Loss: 140.7133
+2024-10-17 15:17:04,923 - INFO - Labels: 1000, Epoch: 33, Test Loss: 148.6430
+2024-10-17 15:17:04,931 - INFO - Best VAE model saved with Test Loss: 148.6430
+2024-10-17 15:17:05,073 - INFO - Labels: 1000, Epoch: 34, Train Loss: 139.8033
+2024-10-17 15:17:05,839 - INFO - Labels: 1000, Epoch: 34, Test Loss: 148.9991
+2024-10-17 15:17:05,995 - INFO - Labels: 1000, Epoch: 35, Train Loss: 139.0894
+2024-10-17 15:17:06,957 - INFO - Labels: 1000, Epoch: 35, Test Loss: 148.3212
+2024-10-17 15:17:06,968 - INFO - Best VAE model saved with Test Loss: 148.3212
+2024-10-17 15:17:07,203 - INFO - Labels: 1000, Epoch: 36, Train Loss: 138.4171
+2024-10-17 15:17:08,223 - INFO - Labels: 1000, Epoch: 36, Test Loss: 146.6414
+2024-10-17 15:17:08,234 - INFO - Best VAE model saved with Test Loss: 146.6414
+2024-10-17 15:17:08,513 - INFO - Labels: 1000, Epoch: 37, Train Loss: 137.0367
+2024-10-17 15:17:09,727 - INFO - Labels: 1000, Epoch: 37, Test Loss: 145.8216
+2024-10-17 15:17:09,738 - INFO - Best VAE model saved with Test Loss: 145.8216
+2024-10-17 15:17:10,047 - INFO - Labels: 1000, Epoch: 38, Train Loss: 136.2372
+2024-10-17 15:17:11,087 - INFO - Labels: 1000, Epoch: 38, Test Loss: 146.4016
+2024-10-17 15:17:11,253 - INFO - Labels: 1000, Epoch: 39, Train Loss: 135.4381
+2024-10-17 15:17:12,255 - INFO - Labels: 1000, Epoch: 39, Test Loss: 145.4917
+2024-10-17 15:17:12,264 - INFO - Best VAE model saved with Test Loss: 145.4917
+2024-10-17 15:17:12,431 - INFO - Labels: 1000, Epoch: 40, Train Loss: 135.4257
+2024-10-17 15:17:13,828 - INFO - Labels: 1000, Epoch: 40, Test Loss: 145.6973
+2024-10-17 15:17:15,427 - INFO - Labels: 1000, SVM Test Accuracy: 0.8091, Test Error Rate: 0.1909
+2024-10-17 15:17:15,428 - INFO - Best SVM model saved with Test Error Rate: 0.1909
+2024-10-17 15:17:15,428 - INFO - 
+Training with 3000 labels:
+2024-10-17 15:17:15,800 - INFO - Labels: 3000, Epoch: 1, Train Loss: 140.3477
+2024-10-17 15:17:16,574 - INFO - Labels: 3000, Epoch: 1, Test Loss: 142.5026
+2024-10-17 15:17:16,586 - INFO - Best VAE model saved with Test Loss: 142.5026
+2024-10-17 15:17:17,253 - INFO - Labels: 3000, Epoch: 2, Train Loss: 138.1095
+2024-10-17 15:17:18,170 - INFO - Labels: 3000, Epoch: 2, Test Loss: 141.7403
+2024-10-17 15:17:18,181 - INFO - Best VAE model saved with Test Loss: 141.7403
+2024-10-17 15:17:18,800 - INFO - Labels: 3000, Epoch: 3, Train Loss: 136.6061
+2024-10-17 15:17:19,850 - INFO - Labels: 3000, Epoch: 3, Test Loss: 139.7436
+2024-10-17 15:17:19,862 - INFO - Best VAE model saved with Test Loss: 139.7436
+2024-10-17 15:17:20,363 - INFO - Labels: 3000, Epoch: 4, Train Loss: 135.2309
+2024-10-17 15:17:21,244 - INFO - Labels: 3000, Epoch: 4, Test Loss: 138.3284
+2024-10-17 15:17:21,255 - INFO - Best VAE model saved with Test Loss: 138.3284
+2024-10-17 15:17:21,739 - INFO - Labels: 3000, Epoch: 5, Train Loss: 133.7128
+2024-10-17 15:17:22,669 - INFO - Labels: 3000, Epoch: 5, Test Loss: 137.3941
+2024-10-17 15:17:22,680 - INFO - Best VAE model saved with Test Loss: 137.3941
+2024-10-17 15:17:23,241 - INFO - Labels: 3000, Epoch: 6, Train Loss: 132.3602
+2024-10-17 15:17:24,340 - INFO - Labels: 3000, Epoch: 6, Test Loss: 136.7390
+2024-10-17 15:17:24,351 - INFO - Best VAE model saved with Test Loss: 136.7390
+2024-10-17 15:17:25,116 - INFO - Labels: 3000, Epoch: 7, Train Loss: 131.7035
+2024-10-17 15:17:26,059 - INFO - Labels: 3000, Epoch: 7, Test Loss: 135.7176
+2024-10-17 15:17:26,069 - INFO - Best VAE model saved with Test Loss: 135.7176
+2024-10-17 15:17:26,773 - INFO - Labels: 3000, Epoch: 8, Train Loss: 130.3727
+2024-10-17 15:17:27,697 - INFO - Labels: 3000, Epoch: 8, Test Loss: 135.2407
+2024-10-17 15:17:27,706 - INFO - Best VAE model saved with Test Loss: 135.2407
+2024-10-17 15:17:28,185 - INFO - Labels: 3000, Epoch: 9, Train Loss: 129.7176
+2024-10-17 15:17:29,128 - INFO - Labels: 3000, Epoch: 9, Test Loss: 135.0648
+2024-10-17 15:17:29,138 - INFO - Best VAE model saved with Test Loss: 135.0648
+2024-10-17 15:17:29,877 - INFO - Labels: 3000, Epoch: 10, Train Loss: 128.8617
+2024-10-17 15:17:30,900 - INFO - Labels: 3000, Epoch: 10, Test Loss: 133.9313
+2024-10-17 15:17:30,911 - INFO - Best VAE model saved with Test Loss: 133.9313
+2024-10-17 15:17:31,384 - INFO - Labels: 3000, Epoch: 11, Train Loss: 128.2872
+2024-10-17 15:17:32,335 - INFO - Labels: 3000, Epoch: 11, Test Loss: 133.8173
+2024-10-17 15:17:32,346 - INFO - Best VAE model saved with Test Loss: 133.8173
+2024-10-17 15:17:32,840 - INFO - Labels: 3000, Epoch: 12, Train Loss: 127.3333
+2024-10-17 15:17:33,647 - INFO - Labels: 3000, Epoch: 12, Test Loss: 133.1344
+2024-10-17 15:17:33,656 - INFO - Best VAE model saved with Test Loss: 133.1344
+2024-10-17 15:17:34,113 - INFO - Labels: 3000, Epoch: 13, Train Loss: 126.5705
+2024-10-17 15:17:34,945 - INFO - Labels: 3000, Epoch: 13, Test Loss: 132.0658
+2024-10-17 15:17:34,956 - INFO - Best VAE model saved with Test Loss: 132.0658
+2024-10-17 15:17:35,502 - INFO - Labels: 3000, Epoch: 14, Train Loss: 125.8792
+2024-10-17 15:17:36,339 - INFO - Labels: 3000, Epoch: 14, Test Loss: 131.5373
+2024-10-17 15:17:36,348 - INFO - Best VAE model saved with Test Loss: 131.5373
+2024-10-17 15:17:36,845 - INFO - Labels: 3000, Epoch: 15, Train Loss: 125.3866
+2024-10-17 15:17:37,932 - INFO - Labels: 3000, Epoch: 15, Test Loss: 131.7599
+2024-10-17 15:17:38,458 - INFO - Labels: 3000, Epoch: 16, Train Loss: 124.6019
+2024-10-17 15:17:39,526 - INFO - Labels: 3000, Epoch: 16, Test Loss: 131.0085
+2024-10-17 15:17:39,537 - INFO - Best VAE model saved with Test Loss: 131.0085
+2024-10-17 15:17:40,077 - INFO - Labels: 3000, Epoch: 17, Train Loss: 123.8760
+2024-10-17 15:17:41,125 - INFO - Labels: 3000, Epoch: 17, Test Loss: 130.1920
+2024-10-17 15:17:41,136 - INFO - Best VAE model saved with Test Loss: 130.1920
+2024-10-17 15:17:41,861 - INFO - Labels: 3000, Epoch: 18, Train Loss: 123.1454
+2024-10-17 15:17:42,868 - INFO - Labels: 3000, Epoch: 18, Test Loss: 130.1401
+2024-10-17 15:17:42,878 - INFO - Best VAE model saved with Test Loss: 130.1401
+2024-10-17 15:17:43,377 - INFO - Labels: 3000, Epoch: 19, Train Loss: 122.7969
+2024-10-17 15:17:44,280 - INFO - Labels: 3000, Epoch: 19, Test Loss: 129.8317
+2024-10-17 15:17:44,289 - INFO - Best VAE model saved with Test Loss: 129.8317
+2024-10-17 15:17:44,776 - INFO - Labels: 3000, Epoch: 20, Train Loss: 122.2749
+2024-10-17 15:17:45,819 - INFO - Labels: 3000, Epoch: 20, Test Loss: 129.2726
+2024-10-17 15:17:45,828 - INFO - Best VAE model saved with Test Loss: 129.2726
+2024-10-17 15:17:46,376 - INFO - Labels: 3000, Epoch: 21, Train Loss: 121.7237
+2024-10-17 15:17:47,237 - INFO - Labels: 3000, Epoch: 21, Test Loss: 129.5309
+2024-10-17 15:17:47,741 - INFO - Labels: 3000, Epoch: 22, Train Loss: 121.6299
+2024-10-17 15:17:48,630 - INFO - Labels: 3000, Epoch: 22, Test Loss: 129.5706
+2024-10-17 15:17:49,281 - INFO - Labels: 3000, Epoch: 23, Train Loss: 121.5476
+2024-10-17 15:17:50,239 - INFO - Labels: 3000, Epoch: 23, Test Loss: 128.8950
+2024-10-17 15:17:50,249 - INFO - Best VAE model saved with Test Loss: 128.8950
+2024-10-17 15:17:50,724 - INFO - Labels: 3000, Epoch: 24, Train Loss: 120.3994
+2024-10-17 15:17:51,618 - INFO - Labels: 3000, Epoch: 24, Test Loss: 128.7770
+2024-10-17 15:17:51,627 - INFO - Best VAE model saved with Test Loss: 128.7770
+2024-10-17 15:17:52,053 - INFO - Labels: 3000, Epoch: 25, Train Loss: 120.2203
+2024-10-17 15:17:52,944 - INFO - Labels: 3000, Epoch: 25, Test Loss: 129.0486
+2024-10-17 15:17:53,478 - INFO - Labels: 3000, Epoch: 26, Train Loss: 119.6296
+2024-10-17 15:17:54,341 - INFO - Labels: 3000, Epoch: 26, Test Loss: 128.4023
+2024-10-17 15:17:54,349 - INFO - Best VAE model saved with Test Loss: 128.4023
+2024-10-17 15:17:54,883 - INFO - Labels: 3000, Epoch: 27, Train Loss: 119.2406
+2024-10-17 15:17:55,931 - INFO - Labels: 3000, Epoch: 27, Test Loss: 128.1804
+2024-10-17 15:17:55,941 - INFO - Best VAE model saved with Test Loss: 128.1804
+2024-10-17 15:17:56,576 - INFO - Labels: 3000, Epoch: 28, Train Loss: 119.0049
+2024-10-17 15:17:57,536 - INFO - Labels: 3000, Epoch: 28, Test Loss: 127.8624
+2024-10-17 15:17:57,547 - INFO - Best VAE model saved with Test Loss: 127.8624
+2024-10-17 15:17:58,121 - INFO - Labels: 3000, Epoch: 29, Train Loss: 118.6864
+2024-10-17 15:17:58,985 - INFO - Labels: 3000, Epoch: 29, Test Loss: 127.8326
+2024-10-17 15:17:58,994 - INFO - Best VAE model saved with Test Loss: 127.8326
+2024-10-17 15:17:59,432 - INFO - Labels: 3000, Epoch: 30, Train Loss: 118.0742
+2024-10-17 15:18:00,484 - INFO - Labels: 3000, Epoch: 30, Test Loss: 127.9799
+2024-10-17 15:18:00,974 - INFO - Labels: 3000, Epoch: 31, Train Loss: 117.4629
+2024-10-17 15:18:01,884 - INFO - Labels: 3000, Epoch: 31, Test Loss: 127.3747
+2024-10-17 15:18:01,893 - INFO - Best VAE model saved with Test Loss: 127.3747
+2024-10-17 15:18:02,391 - INFO - Labels: 3000, Epoch: 32, Train Loss: 117.2762
+2024-10-17 15:18:03,207 - INFO - Labels: 3000, Epoch: 32, Test Loss: 127.7307
+2024-10-17 15:18:03,664 - INFO - Labels: 3000, Epoch: 33, Train Loss: 117.1333
+2024-10-17 15:18:04,560 - INFO - Labels: 3000, Epoch: 33, Test Loss: 127.5877
+2024-10-17 15:18:05,048 - INFO - Labels: 3000, Epoch: 34, Train Loss: 116.8981
+2024-10-17 15:18:05,961 - INFO - Labels: 3000, Epoch: 34, Test Loss: 127.6459
+2024-10-17 15:18:06,431 - INFO - Labels: 3000, Epoch: 35, Train Loss: 116.2956
+2024-10-17 15:18:07,343 - INFO - Labels: 3000, Epoch: 35, Test Loss: 127.2578
+2024-10-17 15:18:07,353 - INFO - Best VAE model saved with Test Loss: 127.2578
+2024-10-17 15:18:07,816 - INFO - Labels: 3000, Epoch: 36, Train Loss: 116.1582
+2024-10-17 15:18:08,679 - INFO - Labels: 3000, Epoch: 36, Test Loss: 126.6674
+2024-10-17 15:18:08,689 - INFO - Best VAE model saved with Test Loss: 126.6674
+2024-10-17 15:18:09,385 - INFO - Labels: 3000, Epoch: 37, Train Loss: 115.3214
+2024-10-17 15:18:10,478 - INFO - Labels: 3000, Epoch: 37, Test Loss: 126.5427
+2024-10-17 15:18:10,488 - INFO - Best VAE model saved with Test Loss: 126.5427
+2024-10-17 15:18:10,975 - INFO - Labels: 3000, Epoch: 38, Train Loss: 115.1357
+2024-10-17 15:18:11,955 - INFO - Labels: 3000, Epoch: 38, Test Loss: 127.1668
+2024-10-17 15:18:12,498 - INFO - Labels: 3000, Epoch: 39, Train Loss: 114.6173
+2024-10-17 15:18:13,354 - INFO - Labels: 3000, Epoch: 39, Test Loss: 126.9995
+2024-10-17 15:18:13,853 - INFO - Labels: 3000, Epoch: 40, Train Loss: 114.4886
+2024-10-17 15:18:14,721 - INFO - Labels: 3000, Epoch: 40, Test Loss: 127.0265
+2024-10-17 15:18:17,623 - INFO - Labels: 3000, SVM Test Accuracy: 0.8739, Test Error Rate: 0.1261
+2024-10-17 15:18:17,623 - INFO - Best SVM model saved with Test Error Rate: 0.1261
+2024-10-17 15:28:28,187 - INFO - 
+Training with 100 labels:
+2024-10-17 15:28:28,299 - INFO - Labels: 100, Epoch: 1, Train Loss: 540.1080
+2024-10-17 15:28:28,846 - INFO - Labels: 100, Epoch: 1, Test Loss: 522.2143
+2024-10-17 15:28:28,853 - INFO - Best VAE model saved with Test Loss: 522.2143
+2024-10-17 15:28:28,868 - INFO - Labels: 100, Epoch: 2, Train Loss: 516.1002
+2024-10-17 15:28:29,422 - INFO - Labels: 100, Epoch: 2, Test Loss: 480.6508
+2024-10-17 15:28:29,429 - INFO - Best VAE model saved with Test Loss: 480.6508
+2024-10-17 15:28:29,445 - INFO - Labels: 100, Epoch: 3, Train Loss: 468.4229
+2024-10-17 15:28:30,036 - INFO - Labels: 100, Epoch: 3, Test Loss: 399.6571
+2024-10-17 15:28:30,044 - INFO - Best VAE model saved with Test Loss: 399.6571
+2024-10-17 15:28:30,059 - INFO - Labels: 100, Epoch: 4, Train Loss: 379.2008
+2024-10-17 15:28:30,732 - INFO - Labels: 100, Epoch: 4, Test Loss: 302.9175
+2024-10-17 15:28:30,741 - INFO - Best VAE model saved with Test Loss: 302.9175
+2024-10-17 15:28:30,758 - INFO - Labels: 100, Epoch: 5, Train Loss: 294.0702
+2024-10-17 15:28:31,510 - INFO - Labels: 100, Epoch: 5, Test Loss: 300.6919
+2024-10-17 15:28:31,519 - INFO - Best VAE model saved with Test Loss: 300.6919
+2024-10-17 15:28:31,538 - INFO - Labels: 100, Epoch: 6, Train Loss: 276.0258
+2024-10-17 15:28:32,319 - INFO - Labels: 100, Epoch: 6, Test Loss: 246.8756
+2024-10-17 15:28:32,329 - INFO - Best VAE model saved with Test Loss: 246.8756
+2024-10-17 15:28:32,347 - INFO - Labels: 100, Epoch: 7, Train Loss: 232.9615
+2024-10-17 15:28:33,139 - INFO - Labels: 100, Epoch: 7, Test Loss: 221.4329
+2024-10-17 15:28:33,149 - INFO - Best VAE model saved with Test Loss: 221.4329
+2024-10-17 15:28:33,165 - INFO - Labels: 100, Epoch: 8, Train Loss: 213.8632
+2024-10-17 15:28:33,974 - INFO - Labels: 100, Epoch: 8, Test Loss: 216.7437
+2024-10-17 15:28:33,986 - INFO - Best VAE model saved with Test Loss: 216.7437
+2024-10-17 15:28:34,009 - INFO - Labels: 100, Epoch: 9, Train Loss: 211.0132
+2024-10-17 15:28:34,934 - INFO - Labels: 100, Epoch: 9, Test Loss: 217.1763
+2024-10-17 15:28:34,952 - INFO - Labels: 100, Epoch: 10, Train Loss: 212.2070
+2024-10-17 15:28:35,855 - INFO - Labels: 100, Epoch: 10, Test Loss: 216.9679
+2024-10-17 15:28:35,879 - INFO - Labels: 100, Epoch: 11, Train Loss: 211.5462
+2024-10-17 15:28:36,724 - INFO - Labels: 100, Epoch: 11, Test Loss: 214.8878
+2024-10-17 15:28:36,734 - INFO - Best VAE model saved with Test Loss: 214.8878
+2024-10-17 15:28:36,757 - INFO - Labels: 100, Epoch: 12, Train Loss: 207.4333
+2024-10-17 15:28:37,620 - INFO - Labels: 100, Epoch: 12, Test Loss: 213.0849
+2024-10-17 15:28:37,631 - INFO - Best VAE model saved with Test Loss: 213.0849
+2024-10-17 15:28:37,655 - INFO - Labels: 100, Epoch: 13, Train Loss: 205.9033
+2024-10-17 15:28:38,470 - INFO - Labels: 100, Epoch: 13, Test Loss: 212.8286
+2024-10-17 15:28:38,479 - INFO - Best VAE model saved with Test Loss: 212.8286
+2024-10-17 15:28:38,496 - INFO - Labels: 100, Epoch: 14, Train Loss: 204.6301
+2024-10-17 15:28:39,273 - INFO - Labels: 100, Epoch: 14, Test Loss: 214.3646
+2024-10-17 15:28:39,290 - INFO - Labels: 100, Epoch: 15, Train Loss: 207.7000
+2024-10-17 15:28:40,111 - INFO - Labels: 100, Epoch: 15, Test Loss: 214.2918
+2024-10-17 15:28:40,131 - INFO - Labels: 100, Epoch: 16, Train Loss: 205.8051
+2024-10-17 15:28:40,960 - INFO - Labels: 100, Epoch: 16, Test Loss: 212.8882
+2024-10-17 15:28:40,980 - INFO - Labels: 100, Epoch: 17, Train Loss: 204.6018
+2024-10-17 15:28:41,764 - INFO - Labels: 100, Epoch: 17, Test Loss: 211.3039
+2024-10-17 15:28:41,773 - INFO - Best VAE model saved with Test Loss: 211.3039
+2024-10-17 15:28:41,790 - INFO - Labels: 100, Epoch: 18, Train Loss: 203.7129
+2024-10-17 15:28:42,600 - INFO - Labels: 100, Epoch: 18, Test Loss: 210.3410
+2024-10-17 15:28:42,610 - INFO - Best VAE model saved with Test Loss: 210.3410
+2024-10-17 15:28:42,632 - INFO - Labels: 100, Epoch: 19, Train Loss: 202.7230
+2024-10-17 15:28:43,474 - INFO - Labels: 100, Epoch: 19, Test Loss: 209.9005
+2024-10-17 15:28:43,484 - INFO - Best VAE model saved with Test Loss: 209.9005
+2024-10-17 15:28:43,503 - INFO - Labels: 100, Epoch: 20, Train Loss: 203.3142
+2024-10-17 15:28:44,320 - INFO - Labels: 100, Epoch: 20, Test Loss: 209.4762
+2024-10-17 15:28:44,330 - INFO - Best VAE model saved with Test Loss: 209.4762
+2024-10-17 15:28:44,349 - INFO - Labels: 100, Epoch: 21, Train Loss: 202.2530
+2024-10-17 15:28:45,172 - INFO - Labels: 100, Epoch: 21, Test Loss: 209.2135
+2024-10-17 15:28:45,182 - INFO - Best VAE model saved with Test Loss: 209.2135
+2024-10-17 15:28:45,199 - INFO - Labels: 100, Epoch: 22, Train Loss: 201.3713
+2024-10-17 15:28:45,959 - INFO - Labels: 100, Epoch: 22, Test Loss: 209.3344
+2024-10-17 15:28:45,976 - INFO - Labels: 100, Epoch: 23, Train Loss: 201.0280
+2024-10-17 15:28:46,784 - INFO - Labels: 100, Epoch: 23, Test Loss: 209.3657
+2024-10-17 15:28:46,803 - INFO - Labels: 100, Epoch: 24, Train Loss: 200.1796
+2024-10-17 15:28:47,700 - INFO - Labels: 100, Epoch: 24, Test Loss: 209.0974
+2024-10-17 15:28:47,709 - INFO - Best VAE model saved with Test Loss: 209.0974
+2024-10-17 15:28:47,727 - INFO - Labels: 100, Epoch: 25, Train Loss: 199.9812
+2024-10-17 15:28:48,669 - INFO - Labels: 100, Epoch: 25, Test Loss: 208.4239
+2024-10-17 15:28:48,681 - INFO - Best VAE model saved with Test Loss: 208.4239
+2024-10-17 15:28:48,701 - INFO - Labels: 100, Epoch: 26, Train Loss: 200.3915
+2024-10-17 15:28:49,560 - INFO - Labels: 100, Epoch: 26, Test Loss: 207.4054
+2024-10-17 15:28:49,571 - INFO - Best VAE model saved with Test Loss: 207.4054
+2024-10-17 15:28:49,593 - INFO - Labels: 100, Epoch: 27, Train Loss: 198.8476
+2024-10-17 15:28:50,488 - INFO - Labels: 100, Epoch: 27, Test Loss: 206.9947
+2024-10-17 15:28:50,498 - INFO - Best VAE model saved with Test Loss: 206.9947
+2024-10-17 15:28:50,519 - INFO - Labels: 100, Epoch: 28, Train Loss: 199.5787
+2024-10-17 15:28:51,373 - INFO - Labels: 100, Epoch: 28, Test Loss: 206.5885
+2024-10-17 15:28:51,382 - INFO - Best VAE model saved with Test Loss: 206.5885
+2024-10-17 15:28:51,403 - INFO - Labels: 100, Epoch: 29, Train Loss: 198.9025
+2024-10-17 15:28:52,236 - INFO - Labels: 100, Epoch: 29, Test Loss: 206.5102
+2024-10-17 15:28:52,246 - INFO - Best VAE model saved with Test Loss: 206.5102
+2024-10-17 15:28:52,266 - INFO - Labels: 100, Epoch: 30, Train Loss: 197.9652
+2024-10-17 15:28:53,132 - INFO - Labels: 100, Epoch: 30, Test Loss: 206.2938
+2024-10-17 15:28:53,141 - INFO - Best VAE model saved with Test Loss: 206.2938
+2024-10-17 15:28:53,817 - INFO - Labels: 100, SVM Test Accuracy: 0.2277, Test Error Rate: 0.7723
+2024-10-17 15:28:53,817 - INFO - Best SVM model saved with Test Error Rate: 0.7723

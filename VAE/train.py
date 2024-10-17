@@ -12,6 +12,8 @@ import pickle
 import random
 from torch.utils.data import DataLoader, Subset
 import logging
+import argparse
+
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -24,13 +26,13 @@ def loss_function(recon_x, x, mean, log_var):
     KL = -0.5 * torch.sum(1 + log_var - mean.pow(2) - log_var.exp())
     return BCE + KL
 
-def get_subset_data_loader(dataset, num_labels):
+def get_subset_data_loader(dataset, num_labels, batch_size=64):
     indices = list(range(len(dataset)))
     random.seed(42)  
     random.shuffle(indices)
     selected_indices = indices[:num_labels]
     subset = Subset(dataset, selected_indices)
-    return DataLoader(subset, batch_size=64, shuffle=True)
+    return DataLoader(subset, batch_size=batch_size, shuffle=True)
 
 
 def train(model, optimizer, train_loader, epochs, num_labels):
@@ -115,25 +117,33 @@ def train_svm(train_features, train_labels, test_features, test_labels, num_labe
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Train VAE model with custom parameters')
+    
+    parser.add_argument('--labels', type=int, default=100, help='Labels')
+    parser.add_argument('--lr', type=float, default=1e-3, help='Learning Rate')
+    parser.add_argument('--epochs', type=int, default=40, help='Training Epochs')
+    parser.add_argument('--batch_size', type=int, default=64, help='Dataset Batch Size')
+
+    args = parser.parse_args()
+
     input_dim = 784
     latent_dim = [512, 256, 128, 64]
 
     model = VAE(input_dim, latent_dim).to(device)
 
-    learning_rate = 1e-3
-    optimizer = optim.Adam(model.parameters(), lr=learning_rate)
-    epochs = 40
+    optimizer = optim.Adam(model.parameters(), lr=args.lr)
+    epochs = args.epochs
+    num_labels = args.labels
+    batch_size = args.batch_size
 
-    label_counts = [100, 600, 1000, 3000]
-    for num_labels in label_counts:
-        print(f"\nTraining with {num_labels} labels:")
-        logging.info(f"\nTraining with {num_labels} labels:")
-        
-        train_loader = get_subset_data_loader(train_data_loader.dataset, num_labels)
+    print(f"\nTraining with {num_labels} labels:")
+    logging.info(f"\nTraining with {num_labels} labels:")
+    
+    train_loader = get_subset_data_loader(train_data_loader.dataset, num_labels, batch_size=)
 
-        train(model, optimizer, train_loader, epochs, num_labels)
+    train(model, optimizer, train_loader, epochs, num_labels)
 
-        train_features, train_labels = extract_latent_features(train_loader, model)
-        test_features, test_labels = extract_latent_features(test_data_loader, model)
+    train_features, train_labels = extract_latent_features(train_loader, model)
+    test_features, test_labels = extract_latent_features(test_data_loader, model)
 
-        train_svm(train_features, train_labels, test_features, test_labels, num_labels)
+    train_svm(train_features, train_labels, test_features, test_labels, num_labels)
