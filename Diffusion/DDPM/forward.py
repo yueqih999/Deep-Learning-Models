@@ -11,7 +11,7 @@ def forward_diffusion(img, t, alpha_bar):
 
 if __name__ == "__main__":
     timesteps = [0, 10, 50, 100, 500]
-    img_path = 'DDPM/images'
+    img_path = 'Diffusion/DDPM/images'
     images_tensor = load_images(img_path)
     max_timestep = max(timesteps) 
     beta_schedule = torch.linspace(0.0001, 0.02, max_timestep + 1)
@@ -32,5 +32,5 @@ if __name__ == "__main__":
             axs[j+1].set_title(f"Timestep={t}\nMSE={mse:.4f}")
 
         plt.suptitle(f'Image {i+1}')
-        plt.savefig(f'DDPM/results/noise_image_{i+1}.png')
+        plt.savefig(f'Diffusion/DDPM/results/noise_image_{i+1}.png')
         plt.close(fig)
