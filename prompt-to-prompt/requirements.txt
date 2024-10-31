@@ -1,0 +1,7 @@
+diffusers==0.17.1
+transformers
+ftfy
+opencv-python
+ipywidgets
+jax==0.4.23
+jaxlib==0.4.23
