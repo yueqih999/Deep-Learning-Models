@@ -10,6 +10,9 @@ This repository is for the Cornell CS 5787 course on Deep Learning. It contains 
 - **GAN** (using MNIST dataset)
   - `DCGAN`
   - `WGAN`
+  - `WGAN-GP`
 - **Diffusion**
   - `DDPM`
   - `DDIM`
+  - `prompt-to-prompt with latent diffusion`
+  - `prompt-to-prompt with diffusion diffusion`
